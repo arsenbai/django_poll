@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ question }}</title>
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
 </head>
 <body>
 
 <h2>
-    <a href="{% url 'polls:index' %}">Back to main page</a>
+    <a href="{% url 'polls:index' %}">Back to Polls</a>
 </h2>
 
     <form action="{% url 'polls:vote' question.id %}" method="post">
